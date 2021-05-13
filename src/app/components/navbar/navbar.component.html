@@ -24,7 +24,9 @@
     </ul>
   </div>
   <div *ngIf="this.UserID" class="navbar-dark navbar-brand">
-    <a class="navbar-brand" href="{{this.loginUser.website}}"  target="_blank" >{{this.loginUser.name}} (<span>{{this.loginUser.company.name}}</span>)</a>
+    <a class="navbar-brand" href="//{{this.loginUser.website}}"  target="_blank" >
+      {{this.loginUser.name}} (<span>{{this.loginUser.company.name}}</span>)
+    </a>
     
   </div>
   <div *ngIf="this.UserID">
