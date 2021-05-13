@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    Albums
+                </div>
+                <div class="card-body">
+                    <div class="form-group" style="display: inline;">
+                        <div class="col-md-12">
+                            <ul class="albumList">
+                                <li *ngFor="let album of albums; let i = index">
+                                    <p class="heading"><strong>Album : {{i+1}} </strong> </p>
+                                    <p>Number of Photos : {{ 12 }}</p>
+                                    <p>{{ album.title }} </p>
+                                    <button mat-raised-button color="primary" class="btnAction"
+                                        (click)="AlbumPhotos(album.id, template)">
+                                        Album Photos
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Table -->
+                    <div class="tableDisplay mat-elevation-z8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #template>
+    <div class="tableDisplayModal mat-elevation-z8">
+
+        <div class="card-body">
+
+            <div class="divCls" *ngFor="let photo of albumPhotos; let i = index">
+                <span title="{{photo.title}}">
+                    <img src="{{photo.thumbnailUrl}}" />
+                    <p>{{photo.title}}</p>
+                </span>
+            </div>
+
+
+        </div>
+    </div>
+</ng-template>
+<br />
+<app-spinner [showSpinner]="isLoading"></app-spinner>

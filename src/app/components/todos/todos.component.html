@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    ToDos
+                </div>
+                <div class="card-body">
+                    <div style="float: right;text-align: right;">
+                        <span class="toggleTodoSection">
+                            <section class="example-section">
+                                <mat-checkbox class="example-margin" [(ngModel)]="ShowCompleted">
+                                    Hide Completed Todos
+                                </mat-checkbox>
+                            </section>
+                        </span>
+                    </div>
+                    <div class="form-group" style="display: inline;">
+                        <ul class="tods">
+                            <li *ngFor="let todo of todos |  DisplayCheckedItems: ShowCompleted ; let i = index">
+                                <section class="example-section">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="todo.completed">
+                                        {{ todo.title }}
+                                    </mat-checkbox>
+                                </section>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Table -->
+                    <div class="tableDisplay mat-elevation-z8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-spinner [showSpinner]="isLoading"></app-spinner>

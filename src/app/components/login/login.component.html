@@ -1,0 +1,21 @@
+<div style="width: 100%; text-align: center;">
+
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+
+        <form class="example-form" style="margin-top: 20px;">
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email Address" name="EmailAddress" [(ngModel)]="EmailAddress">
+                </mat-form-field>
+
+            </mat-card-content>
+            <button mat-raised-button color="primary" class="btnAction" (click)="Login()">
+                Login
+            </button>
+        </form>
+    </mat-card>
+
+</div>

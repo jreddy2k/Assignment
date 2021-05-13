@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-header-cell,
+.mat-sort-header {
+  /* background-color: #006ab4;  */
+  background-color: #006ab4 !important;
+  color: white !important;
+}
+.eye{
+  color: #006ab4
+}
+.pencil{
+  color: #ffc107
+}
+.bin{
+  color: #bd2130
+}
+.btnAction{
+    background-color: #006ab4 !important;
+    color: white !important;
+}
+.btnCancel{
+  background-color: #bd2130 !important;
+  color: white !important;
+}
+mat-label{
+color: black !important;
+font-size: medium !important;
+}
+button{
+outline-style: none !important;
+}
+.mat-tooltip {
+font-size: 14px !important;
+}
+mat-form-field {
+  width: 100%!important;
+}
+.mat-paginator-page-size-select {
+  margin: 6px 4px 0 4px;
+  width: 56px!important;
+}
+form {
+  width: 100%!important;
+}
+.bg-primary{
+  background-color: #006ab4 !important;
+}
+
+
+.modal-header {
+  height: 60px;
+  color: white;
+}
+#modalClose {
+  padding-top: 1px;
+  margin-top: 5px;
+}
+

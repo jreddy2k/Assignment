@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+  <a class="navbar-brand" href="https://torinit.com/" [ngClass]="{'active': this.posts}" target="_blank" >TORINIT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" *ngIf="this.UserID">
+     
+      <li class="nav-item" 
+      [ngClass]="{'active': this.albums}">
+        <a class="nav-link" routerLink="/albums/{{this.loginUser.id}}">Albums</a>
+      </li>
+
+      <li class="nav-item" 
+      [ngClass]="{'active': this.posts}">
+        <a class="nav-link" routerLink="/posts/{{this.loginUser.id}}">Posts</a>
+      </li>
+      
+      <li class="nav-item" 
+      [ngClass]="{'active': this.todos}">
+        <a class="nav-link" routerLink="/todos/{{this.loginUser.id}}">ToDos</a>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="this.UserID" class="navbar-dark navbar-brand">
+    <a class="navbar-brand" href="{{this.loginUser.website}}"  target="_blank" >{{this.loginUser.name}} (<span>{{this.loginUser.company.name}}</span>)</a>
+    
+  </div>
+  <div *ngIf="this.UserID">
+    <button type="button" class="btn btn-danger" (click)="logoutApplication()">
+      Logout
+    </button>
+  </div>
+</nav>
