@@ -5,11 +5,7 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { DataViewModule } from "primeng/dataview";
-import { PaginatorModule } from "primeng/paginator";
-import { TableModule } from "primeng/table";
-import { DataTablesModule } from "angular-datatables";
-import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
+
 
 import { DatePipe } from "@angular/common";
 
@@ -56,16 +52,11 @@ if (window.location.href.includes("localhost")) {
   //entryComponents: [ShowFormsdialog],
   imports: [
     BrowserModule,
-    DataTablesModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    DataViewModule,
-    PaginatorModule,
-    TableModule,
-    NgMultiSelectDropDownModule.forRoot(),
     ModalModule.forRoot(),
     MaterialModule,
     PipesModule,
