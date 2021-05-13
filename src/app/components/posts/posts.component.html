@@ -5,44 +5,23 @@
                 <div class="card-header bg-dark text-white">
                     Posts
                 </div>
-                <div class="card-body">
-                    <!-- <h3 style="background-color: yellow;">Posts List <input type="text" [(ngModel)]="searchText" class="searchInput" placeholder="Search title"></h3> -->
+                <div class="card-body">                   
+                    
                     <mat-form-field class="example-full-width">
                         <mat-label>Search Posts</mat-label>
                         <input matInput placeholder="Search" [(ngModel)]="searchText" >
                       </mat-form-field>
 
-                    <div class="form-group" style="display: inline;">
-                        <div class="accordion mb-1" id="posts" *ngFor="let post of posts| FilterPipe: searchText ; let i = index">
-                            <div class="card">
-                                <div class="card-header" style="padding: 0.0em !important" id="posts1">
-                                    <h5 class="mb-0" >
-                                        <button class="btn btn-link" type="button" data-toggle="collapse"
-                                            data-target="#posts2" aria-expanded="true" aria-controls="posts2"
-                                            >
-                                            {{post.title}} - Count <span class="commentsCount">{{post.comments.length}}</span>
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="posts2" class="collapse" aria-labelledby="posts1" data-parent="#posts">
-                                    <p>{{ post.body }}</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <!-- <mat-expansion-panel style="margin-top: 9px;" *ngFor="let post of posts">
+                    <mat-expansion-panel style="margin-top: 9px;" *ngFor="let post of posts| FilterPipe: searchText ; let i = index">
                         <mat-expansion-panel-header style="background-color:grey;color: white;">
                             <mat-panel-title style="color: white;" >
-                                {{post.title}}
+                                <span>{{post.title}} - Count <b> {{post.comments.length}} </b></span>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <mat-panel-description>
-                            <p *ngFor="let pcomments of postComments">{{pcomments.body}}</p>
+                            <p>{{post.body}}</p>
                         </mat-panel-description>
-                    </mat-expansion-panel> -->
+                    </mat-expansion-panel>
                 </div>
             </div>
         </div>
