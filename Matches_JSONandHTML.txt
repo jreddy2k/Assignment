@@ -1,0 +1,1228 @@
+========================================
+Match Summary JSON
+=============================================
+{
+    "CaseName": "DJSHDSDS, SHGSJQQQ",
+    "CaseNo": "00010012838I",
+    "ClientId": "69861",
+    "RequestDate": "12/06/2017 11:08 AM",
+    "ExecTime": "18 ms",
+    "ShowExecTimes": false,
+    "Header": [
+        {
+            "FirstName": "Shgsjqqq ",
+            "LastName": "Djshdsds",
+            "DOB": "01/03/1985",
+            "SSN": "000-00-0000",
+            "MatchRequestDate": "12/06/2017"
+        }
+    ],
+    "Detail": [
+        {
+            "MatchName": "NYCHA Section 8",
+            "MatchCode": "M2",
+            "ItemList": [
+                {
+                    "StatusId": 203,
+                    "ResultId": 66521,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-remove bigger-120,dark",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": false
+                }
+            ]
+        },
+        {
+            "MatchName": "HPD Section 8",
+            "MatchCode": "M8",
+            "ItemList": [
+                {
+                    "StatusId": 203,
+                    "ResultId": 66114,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-remove bigger-120,dark",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": false
+                }
+            ]
+        },
+        {
+            "MatchName": "NYC Marriage",
+            "MatchCode": "M1",
+            "ItemList": [
+                {
+                    "StatusId": 201,
+                    "ResultId": 49456,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-ok bigger-120,green",
+                    "ResultDate": "12/06/2017",
+                    "ResultDateLabel": "Result Date: 12/06/2017",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": true
+                }
+            ]
+        },
+        {
+            "MatchName": "NYC Vital Records",
+            "MatchCode": "M9",
+            "ItemList": [
+                {
+                    "StatusId": 203,
+                    "ResultId": 66648,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-remove bigger-120,dark",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": false
+                }
+            ]
+        },
+        {
+            "MatchName": "TALX ",
+            "MatchCode": "M4",
+            "ItemList": [
+                {
+                    "StatusId": 203,
+                    "ResultId": 0,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-remove bigger-120,dark",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": false
+                }
+            ]
+        },
+        {
+            "MatchName": "NYC Employee",
+            "MatchCode": "M3",
+            "ItemList": [
+                {
+                    "StatusId": 204,
+                    "ResultId": 66203,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-time bigger-120,orange",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": false
+                }
+            ]
+        },
+        {
+            "MatchName": "ACCIS - Childcare Provider Income",
+            "MatchCode": "M7",
+            "ItemList": [
+                {
+                    "StatusId": 203,
+                    "ResultId": 66650,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-remove bigger-120,dark",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": false
+                }
+            ]
+        },
+        {
+            "MatchName": "Taxi Limousine Commission ",
+            "MatchCode": "M5",
+            "ItemList": [
+                {
+                    "StatusId": 206,
+                    "ResultId": 0,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-ban-circle bigger-120,light-grey",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "",
+                    "ClickAllowed": false
+                }
+            ]
+        },
+        {
+            "MatchName": "Child Support Income  ",
+            "MatchCode": "M6",
+            "ItemList": [
+                {
+                    "StatusId": 203,
+                    "ResultId": 66695,
+                    "ClientId": "69861",
+                    "StatusImage": "glyphicon glyphicon-remove bigger-120,dark",
+                    "ResultDate": "",
+                    "ResultDateLabel": "",
+                    "RequestDate": "12/06/2017 11:08 AM",
+                    "ClickAllowed": false
+                }
+            ]
+        }
+    ]
+}
+
+
+
+=============================================
+Match Summary HTML
+========================================================
+<div class="row" style="padding-bottom: 0px">
+    <div class="col-md-12">
+        <div ng-show="loadingMatchSummary" id="overlay">
+            <div>
+                <img id="loader" src="assets/images/spinner.gif" />
+            </div>
+        </div>
+        <table style="width: 100%">
+            <!-- <td style="text-align: left; font-weight: bold">{{caseDetails}}</td>
+                <td style="text-align: right; font-weight: bold; width: auto">Request Date</td>
+                <td style="text-align: right; overflow: hidden; width: 5%">{{requestDateTime}}</td>-->
+            <tr style="height: 25px">
+                <td style="text-align: left; width: 70%;">
+                    <label class="matchheader">{{ matchSummaryList.CaseName }} <span style="padding-left: 10px">{{ matchSummaryList.CaseNo }}</span></label>
+                </td>
+                <td style="text-align: right; width: 30%;">
+                    <label class="matchheader">Request Date/Time: {{ requestDateTime }}</label>
+                </td>
+            </tr>
+        </table>
+
+        <div class="widget-box" style="overflow-y: hidden">
+            <!--            <div style="text-align: center; overflow-y: hidden;">
+                <table style="text-align: center; width: 100%">
+                    <tr>
+                        <td style="text-align: center;font-weight: bold">Match Summary</td>
+                    </tr>
+                </table>
+            </div>-->
+            <div class="widget-header" style="overflow-y: hidden">
+                <table style="width: 100%; text-align: center;">
+                    <tr>
+                        <td style="width: 80%; color: #004b8d;">
+                            <h4 class="widget-title" style="font-weight: bold" ng-show="!fromMatchRunHistory">Match Summary</h4>
+                            <!--Radhika 03/15/2017 - IVS Phase 2 requirement - Show Match Summary appended with request date on History Match Summary screen -->
+                            <h4 class="widget-title" style="font-weight: bold" ng-show="fromMatchRunHistory">Match Summary {{requestDateTime.substr(0,requestDateTime.indexOf(' '))}}</h4>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="widget-body" id="container">
+                <div class="widget-main" style="padding-bottom: 0px">
+                    <!-- /.page-header -->
+                    <div class="row" style="padding-left: 5px;">
+                        <table class="table table-striped table-bordered table-hover" ng-style="{'width':dynamicWidth}">
+                            <tr>
+                                <td style="padding: 0px; border-color: black; min-width: 5px; max-width: 10px;">
+                                    <table style="width: 100%">
+                                        <!--Left Columns-->
+                                        <tr style="border-bottom: thin solid;">
+                                            <td style="height: 26px; background-color: #08619E; font-weight: bold; color: white; padding-left: 5px">First Name, Middle Initial</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid;">
+                                            <td style="height: 26px; background-color: #08619E; font-weight: bold; color: white; padding-left: 5px">Last Name</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid;">
+                                            <td style="height: 26px; background-color: #08619E; font-weight: bold; color: white; padding-left: 5px">DOB</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid;">
+                                            <td style="height: 26px; background-color: #08619E; font-weight: bold; color: white; padding-left: 5px">SSN</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid;">
+                                            <td style="height: 26px; background-color: #08619E; font-weight: bold; color: white; padding-left: 5px">Match Request Date</td>
+                                        </tr>
+                                        <!--<tr style="border-bottom: thin solid;">
+                                            <td style="height: 26px; background-color: #08619E; font-weight: bold; color: white; padding-left: 5px">Active in DHS</td>
+                                        </tr>-->
+                                    </table>
+                                </td>
+                                <!--Right Column-->
+                                <td ng-repeat="headerItem in matchSummaryList.Header" style="padding: 0px; border-color: black; text-align: center">
+                                    <table style="width: 100%">
+                                        <tr style="border-bottom: thin solid">
+                                            <td style="white-space: nowrap; height: 26px; background-color: #828080; padding-left: 4px; padding-right: 4px; color: white; font-weight: bold;">{{ headerItem.FirstName }}</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid">
+                                            <td style="white-space: nowrap; height: 26px; background-color: #828080; padding-left: 4px; padding-right: 4px; color: white; font-weight: bold;">{{ headerItem.LastName }}</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid">
+                                            <td style="white-space: nowrap; height: 26px; background-color: #828080; padding-left: 4px; padding-right: 4px; color: white; font-weight: bold">{{ headerItem.DOB }}</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid">
+                                            <td style="white-space: nowrap; height: 26px; background-color: #828080; padding-left: 4px; padding-right: 4px; color: white; font-weight: bold;">{{ headerItem.SSN }}</td>
+                                        </tr>
+                                        <tr style="border-bottom: thin solid">
+                                            <td style="white-space: nowrap; height: 26px; background-color: #828080; padding-left: 4px; padding-right: 4px; color: white; font-weight: bold;">{{ headerItem.MatchRequestDate }}</td>
+                                        </tr>
+                                        <!--<tr style="border-bottom: thin solid">
+                                            <td style="white-space: nowrap; height: 26px; background-color: #828080; padding-left: 4px; padding-right: 4px; color: white; font-weight: bold;">{{ headerItem.ActiveInDHS }}</td>
+                                        </tr>-->
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr ng-repeat="detailItem in matchSummaryList.Detail">
+                                <!--Left Column-->
+                                <td style="padding: 0px; border-color: black; white-space: nowrap; width: 10%; height: 26px; background-color: #CEEAFD; font-weight: bold; padding-left: 5px; padding-right: 5px;">{{ detailItem.MatchName }}</td>
+                                <!--Right Column-->
+                                <td ng-repeat="detailMatchItem in detailItem.ItemList" style="padding: 0px; border-color: black; text-align: center; height: 26px; vertical-align: central;">
+                                    <table style="width: 100%">
+                                        <tr>
+                                            <td>
+                                                <a ng-style="getClickIconStyle(detailMatchItem.ClickAllowed)" class="{{detailMatchItem.StatusImage.split(',')[1]}}" href="">
+                                                    <div ng-click="detailMatchItem.ClickAllowed && MatchCellClick(detailItem.MatchCode,detailMatchItem.ResultId,detailMatchItem.RequestDate,detailMatchItem.ClientId)" title="{{ detailMatchItem.ResultDateLabel }}">
+                                                        <i class="{{detailMatchItem.StatusImage.split(',')[0]}}"></i>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="space-10"></div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="space-10"></div>
+        <div>
+            <table style="border: initial; border-color: black;" border="1">
+                <tr>
+                    <td colspan="2" style="background-color: darkgray; color: black; font-weight: bold; text-align: center">Icon Legend</td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 3px; padding-left: 3px">
+                        <a class="green">
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </a>
+                    </td>
+                    <td style="padding-right: 3px; padding-left: 3px">Match Found</td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 3px; padding-left: 3px">
+                        <a class="dark">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                    </td>
+                    <td style="white-space: nowrap; padding-right: 3px; padding-left: 3px">No Match Found</td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 3px; padding-left: 3px">
+                        <a class="orange">
+                            <i class="glyphicon glyphicon-time"></i>
+                        </a>
+                    </td>
+                    <td style="padding-right: 3px; padding-left: 3px">Pending Match Results</td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 3px; padding-left: 3px">
+                        <a class="red">
+                            <i class="glyphicon glyphicon-warning-sign"></i>
+                        </a>
+                    </td>
+                    <td style="padding-right: 3px; padding-left: 3px">Match Failed</td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 3px; padding-left: 3px">
+                        <a class="light-grey">
+                            <i class="glyphicon glyphicon-ban-circle"></i>
+                        </a>
+                    </td>
+                    <td style="padding-right: 3px; padding-left: 3px">Match Not Requested</td>
+                </tr>
+            </table>
+        </div>
+        <table style="width: 100%" ng-show="matchSummaryList.ShowExecTimes">
+            <tr style="text-align: left">
+                <td style="width: 11%; font-weight: bold">Query Execution Time:</td>
+                <td>{{queryExecutionTime}}</td>
+            </tr>
+            <tr style="text-align: left">
+                <td style="width: 15%; font-weight: bold">RoundTrip Execution Time:</td>
+                <td>{{roundTripExecutionTime}} ms</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+============================================
+TALX JSON
+===============================
+[
+    {
+        "AuthenticationValue": "Verified Upon Receipt",
+        "ResultID": 759533,
+        "RequestDate": "02/11/2020 06:23 PM",
+        "ResultDate": "02/11/2020 07:15 PM",
+        "EmployeeStatus": "Active",
+        "EmployeeAddress": "126 MAIN ST., APARTMENT 3A, ST. LOUIS, MO, 63101-1020",
+        "EmployerName": "Enterprise",
+        "EmployerCode": "90001",
+        "EmployerAddress": "1850 Borman Ct, Suite 100, St. Charles, MO, 63146-1234, us",
+        "EmployeeInfoEffDate": "02/01/2020",
+        "HireDate": "04/04/2017",
+        "MonthsOfService": "34",
+        "TerminationDate": "Not Reported",
+        "TerminationReason": "Not Reported",
+        "PayFrequency": "Hourly",
+        "HoursPerPayPeriod": "80",
+        "PayRate": "$20.81",
+        "PensionIncome": "",
+        "AdditionalIncome": "",
+        "WorkersCompBenefit": "",
+        "CarrierName": "",
+        "AwardDate": "",
+        "WorkersCompCompensation": "",
+        "ClaimNumber": "",
+        "ClaimPending": "",
+        "LocationCode": "",
+        "SiteCode": "",
+        "DepartmentCode": "",
+        "MedicalInsurance": "Y",
+        "EmployeeEnrolled": "Y",
+        "EligibleDate": "",
+        "CoverageStartDate": "",
+        "CoverageEndDate": "",
+        "DependentAvailable": "",
+        "NoOfDependents": "1",
+        "DependentCost": "",
+        "PayList": [
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "02/01/2020",
+                "CheckPaidDate": "02/01/2020",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "01/15/2020",
+                "CheckPaidDate": "01/15/2020",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "01/01/2020",
+                "CheckPaidDate": "01/01/2020",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "12/15/2019",
+                "CheckPaidDate": "12/15/2019",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "12/01/2019",
+                "CheckPaidDate": "12/01/2019",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "11/15/2019",
+                "CheckPaidDate": "11/15/2019",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "11/01/2019",
+                "CheckPaidDate": "11/01/2019",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "10/15/2019",
+                "CheckPaidDate": "10/15/2019",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "10/01/2019",
+                "CheckPaidDate": "10/01/2019",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            },
+            {
+                "PayPeriodBeginDate": "Not Reported",
+                "PayPeriodEndDate": "09/15/2019",
+                "CheckPaidDate": "09/15/2019",
+                "HoursWorked": "80",
+                "GrossAmount": "$170.96",
+                "PeriodYTDGrossEarnings": "Not Reported"
+            }
+        ]
+    }
+]
+==============================
+TALX HTML
+===================
+<div class="row">
+    <form name="TALX">
+        <div class="col-md-12">
+            <table style="width: 100%">
+                <tr style="height: 25px">
+                    <td style="text-align: left;">
+                        <label class="matchheader">{{ caseName }} <span style="padding-left: 10px">{{ caseNo }}</span></label></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <div ng-show="loading" id="overlay">
+                <div>
+                    <img id="loader" src="assets/images/spinner.gif" />
+                </div>
+            </div>
+            <div class="widget-box" style="width:1285px">
+                <div class="widget-header" style="height: 25px">
+                    <table style="width: 100%; text-align: center">
+                        <tr>
+                            <td style="width: 80%; color: #004b8d;">
+                                <h4 class="widget-title">TALX</h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <ul class="nav nav-tabs tab-color-blue background-blue" style="white-space: nowrap; overflow-x: auto; overflow-y: hidden; min-height: 35px;">
+                            <li ng-class="getclass(tabinfo.ResultId)" ng-repeat="tabinfo in TALXTabInfo" style="float: none; display: inline-block; min-width: 50px; font-size: 13px;"><a data-toggle="tab" ng-click="tabClick(tabinfo.ResultId,tabinfo.ClientId,tabinfo.Path,tabinfo.Name,tabinfo.SSN,tabinfo.DOB)" href="">{{tabinfo.Name}}</a></li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table style="padding: 5px; width: 100%; text-align: left; border-collapse: separate; border-spacing: 5px 3px;" frame="box">
+                                    <tr>
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td style="width: 40%" title="Name">
+                                                        <label class="matchlabel">{{ tabname }}</label>
+                                                    </td>
+                                                    <td style="width: 35%" title="SSN">
+                                                        <label class="matchlabel">SSN: </label>
+                                                        <label class="matchlabel">{{ tabssn }}</label>
+                                                    </td>
+                                                    <td style="width: 25%" title="Date Of Birth">
+                                                        <label class="matchlabel">Date Of Birth: </label>
+                                                        <label class="matchlabel">{{ tabdob }}</label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <ul class="nav nav-tabs tab-color-lightblue background-lightblue" style="white-space: nowrap; overflow-x: auto; overflow-y: hidden; height: 35px; padding-top: 0px; padding-left: 0px">
+                                                    <li ng-class="getclass_subtab($index)" ng-repeat="jobiteminfo in JobInfo" style="float: none; display: inline-block; min-width: 50px; font-size: 13px; border-color: black; border: thick"><a data-toggle="tab" ng-click="SubtabClick($index)" href="">Job {{$index+1}}</a></li>
+                                                </ul>
+                                            </div>
+                                            <table style="width: 100%; text-align: left; border-collapse: separate; border-spacing: 10px 10px;" frame="box">
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <table style="width: 100%; text-align: left; border-collapse: separate;">
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel_15px">Employee Information</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel ">Address: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.EmployeeAddress}}</label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <table style="width: 100%; text-align: left; border-collapse: separate;">
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel_15px">Employer's Information</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <label class="matchlabel ">Name: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.EmployerName}}</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    <label class="matchlabel ">Address: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.EmployerAddress}}</label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <table style="width: 100%; text-align: left; border-collapse: separate;">
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <label class="matchlabel">Employee Status Message: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.EmployeeStatus}}</label>
+                                                                    <label class="matchvalueleft">as of </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.EmployeeInfoEffDate}}</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel ">Hire Date: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.HireDate}}</label>
+                                                                </td>
+                                                                <td>
+                                                                    <label class="matchlabel ">Months of Service: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.MonthsOfService}}</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel ">Termination Date: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.TerminationDate}}</label>
+                                                                </td>
+                                                                <td>
+                                                                    <label class="matchlabel ">Termination Reason: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.TerminationReason}}</label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <table style="width: 100%; text-align: left; border-collapse: separate;">
+                                                            <tr>
+                                                                <td style="width: 35%">
+                                                                    <label class="matchlabel_15px">Income Information</label>
+                                                                </td>
+                                                                <td style="width: 34%"></td>
+                                                                <td style="width: 31%"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel ">Pay Frequency: </label>
+                                                                    <label class="matchvalueleft ">{{jobiteminfo.PayFrequency}}</label>
+                                                                </td>
+                                                                <td>
+                                                                    <label class="matchlabel ">Average Hours per Pay Period: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.HoursPerPayPeriod}}</label>
+                                                                </td>
+                                                                <td>
+                                                                    <label class="matchlabel ">Pay Rate: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.PayRate}}</label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <table class="detailtable" frame="box" style="width: 80%;">
+                                                            <tr>
+                                                                <td align="center">
+                                                                    <table style="width: 100%;">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <table style="width: 100%;">
+                                                                                    <tr style="border-bottom: thin solid; text-align: center;">
+                                                                                        <td></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 17%;">
+                                                                                            <label class="matchlabelsmall">Pay Period Begin Date</label>
+                                                                                        </td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 17%;">
+                                                                                            <label class="matchlabelsmall">Pay Period End Date</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 17%;">
+                                                                                            <label class="matchlabelsmall">Check Paid Date</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 12%;">
+                                                                                            <label class="matchlabelsmall">Hours Worked</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 12%;">
+                                                                                            <label class="matchlabelsmall">Gross Amount</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 22%;">
+                                                                                            <label class="matchlabelsmall">Period YTD Gross Earnings</label></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr></tr>
+                                                                        <tr>
+                                                                            <td style="padding: 0px; border-color: black;">
+                                                                                <table style="width: 100%">
+                                                                                    <tr ng-repeat="payItem in jobiteminfo.PayList" style="border-bottom: thin solid;">
+                                                                                        <td style="border-right: thin solid; border-left: thin solid; text-align: center;">
+                                                                                            <label class="matchlabelsmall">{{$index+1}}</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 17%; text-align: center; border-right: thin solid;">
+                                                                                            <label class="matchvaluesmall">{{payItem.PayPeriodBeginDate}}</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 17%; text-align: center; border-right: thin solid;">
+                                                                                            <label class="matchvaluesmall">{{ payItem.PayPeriodEndDate}}</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 17%; text-align: center; border-right: thin solid;">
+                                                                                            <label class="matchvaluesmall">{{ payItem.CheckPaidDate}}</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; padding-right: 5px; width: 12%; text-align: right; border-right: thin solid;">
+                                                                                            <label class="matchvaluesmall">{{ payItem.HoursWorked}}</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; width: 12%; padding-right: 5px; text-align: right; border-right: thin solid;">
+                                                                                            <label class="matchvaluesmall">{{ payItem.GrossAmount}}</label></td>
+                                                                                        <td style="white-space: nowrap; height: 26px; padding-right: 5px; width: 22%; text-align: right; border-right: thin solid;">
+                                                                                            <label class="matchvaluesmall">{{ payItem.PeriodYTDGrossEarnings}}</label></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <table style="width: 100%; text-align: left; border-collapse: separate;">
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel_15px">Insurance Information</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="width: 53%">
+                                                                    <label class="matchlabel ">Medical Insurance : </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.MedicalInsurance}}</label>
+                                                                </td>
+
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <label class="matchlabel ">Employee Enrolled: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.EmployeeEnrolled}}</label>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <tr>
+                                                                
+                                                                <td colspan="2">
+                                                                    <label class="matchlabel ">Number of Dependents Enrolled: </label>
+                                                                    <label class="matchvalueleft">{{jobiteminfo.NoOfDependents}}</label>
+                                                                </td>
+                                                            </tr>
+                                                           
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: right" colspan="3">
+                                                        <table style="border-collapse: collapse; width: 100%">
+                                                            <tr>
+                                                                <td style="text-align: right">
+                                                                    <label class="datesmall">Request Date/Time: {{ jobiteminfo.RequestDate }}</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="text-align: right">
+                                                                    <label class="datesmall">Data current as of: {{ jobiteminfo.ResultDate }}</label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+====================================================
+Child Support Expense
+==================================================
+[
+    {
+        "AuthenticationValue": "Verified Upon Receipt",
+        "ResultID": 236461,
+        "RequestDate": "10/30/2020 02:45 PM",
+        "ResultDate": "10/30/2020 04:10 PM",
+        "CSMSNumber": "NW44199S1",
+        "CustoParent": "NIXON, DANELL (Case Member)",
+        "NCustoParent": "WILLIAMS, CHARQWYN A (Non-Case Member)",
+        "EffectiveDate": "Not Reported",
+        "ObligationAmount": "$0.00",
+        "ExpenseList": [
+            {
+                "PaymentDate": "09/2020",
+                "Amount": "Not Reported",
+                "Source": "Not Reported"
+            },
+            {
+                "PaymentDate": "08/2020",
+                "Amount": "$43.26",
+                "Source": "Unemployment Insurance Garnishment"
+            },
+            {
+                "PaymentDate": "07/2020",
+                "Amount": "$173.04",
+                "Source": "Unemployment Insurance Garnishment"
+            },
+            {
+                "PaymentDate": "06/2020",
+                "Amount": "$216.30",
+                "Source": "Unemployment Insurance Garnishment"
+            },
+            {
+                "PaymentDate": "05/2020",
+                "Amount": "$173.04",
+                "Source": "Unemployment Insurance Garnishment"
+            },
+            {
+                "PaymentDate": "04/2020",
+                "Amount": "$216.30",
+                "Source": "Unemployment Insurance Garnishment"
+            }
+        ],
+        "ChildrenList": [
+            {
+                "ChildName": "BROOKS, COREY L  II (Non-Case Member)",
+                "ChildDOB": "11/04/1996",
+                "ChildSSN": "Not Reported"
+            }
+        ]
+    },
+    {
+        "AuthenticationValue": "Verified Upon Receipt",
+        "ResultID": 236461,
+        "RequestDate": "10/30/2020 02:45 PM",
+        "ResultDate": "10/30/2020 04:10 PM",
+        "CSMSNumber": "PA91689C1",
+        "CustoParent": "NIXON, DANELL (Case Member)",
+        "NCustoParent": "WILLIAMS, CHARQWYN A (Non-Case Member)",
+        "EffectiveDate": "Not Reported",
+        "ObligationAmount": "$0.00",
+        "ExpenseList": [
+            {
+                "PaymentDate": "09/2020",
+                "Amount": "Not Reported",
+                "Source": "Not Reported"
+            },
+            {
+                "PaymentDate": "08/2020",
+                "Amount": "Not Reported",
+                "Source": "Not Reported"
+            },
+            {
+                "PaymentDate": "07/2020",
+                "Amount": "Not Reported",
+                "Source": "Not Reported"
+            },
+            {
+                "PaymentDate": "06/2020",
+                "Amount": "Not Reported",
+                "Source": "Not Reported"
+            },
+            {
+                "PaymentDate": "05/2020",
+                "Amount": "Not Reported",
+                "Source": "Not Reported"
+            },
+            {
+                "PaymentDate": "04/2020",
+                "Amount": "Not Reported",
+                "Source": "Not Reported"
+            }
+        ],
+        "ChildrenList": [
+            {
+                "ChildName": "BROOKS, COREY L  II (Non-Case Member)",
+                "ChildDOB": "11/04/1996",
+                "ChildSSN": "589-65-5402"
+            }
+        ]
+    }
+]
+
+===================================================================================
+Child Support Expense HTML
+=====================================================
+<div class="row">
+    <form name="ChildSupportIncome">
+        <div class="col-md-12">
+            <table style="width: 100%">
+                <tr style="height: 25px">
+                    <td style="text-align: left;">
+                        <label class="matchheader">{{ caseName }} <span style="padding-left: 10px">{{ caseNo }}</span></label></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <div ng-show="loading" id="overlay">
+                <div>
+                    <img id="loader" src="assets/images/spinner.gif" />
+                </div>
+            </div>
+            <div class="widget-box">
+                <div class="widget-header">
+                    <table style="width: 100%; text-align: center">
+                        <tr>
+                            <td style="width: 80%; color: #004b8d">
+                                <h4 class="widget-title">Child Support Expense</h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <div>
+                            <ul class="nav nav-tabs tab-color-blue background-blue" style="white-space: nowrap; overflow-x: auto; overflow-y: hidden; min-height: 35px;">
+                                <li ng-class="getclass(tabinfo.ResultId)" ng-repeat="tabinfo in ChildSupportExpenseTabInfo" style="float: none; display: inline-block; min-width: 50px; font-size: 13px;"><a data-toggle="tab" ng-click="tabClick(tabinfo.ResultId,tabinfo.ClientId,tabinfo.Path,tabinfo.Name,tabinfo.SSN,tabinfo.DOB)" href="">{{tabinfo.Name}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table style="padding: 5px; width: 100%; text-align: left; border-collapse: separate; border-spacing: 5px 3px;" frame="box">
+                                    <tr style="padding-top: 0px; padding-bottom: 0px;">
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td style="width: 40%" title="Name">
+                                                        <label class="matchlabel">{{ tabname }}</label>
+                                                    </td>
+                                                    <td style="width: 35%" title="SSN">
+                                                        <label class="matchlabel">SSN: </label>
+                                                        <label class="matchlabel">{{ tabssn }}</label>
+                                                    </td>
+                                                    <td style="width: 25%" title="Date Of Birth">
+                                                        <label class="matchlabel">Date Of Birth: </label>
+                                                        <label class="matchlabel">{{ tabdob }}</label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <ul class="nav nav-tabs tab-color-lightblue background-lightblue" style="white-space: nowrap; overflow-x: auto; overflow-y: hidden; height: 35px; padding-top: 0px; padding-left: 0px">
+                                                    <li ng-class="getclass_subtab($index)" ng-repeat="csmsDetail in ChildSupportExpenseInfo" style="float: none; display: inline-block; min-width: 50px; font-size: 13px; border-color: black; border: thick">
+                                                        <a data-toggle="tab" ng-click="SubtabClick($index)" href="">CSMS # {{csmsDetail.CSMSNumber}}</a>
+                                                    </li>
+                                                </ul>
+                                                <table style="width: 100%; text-align: left; border-collapse: separate; border-spacing: 10px 7px;" frame="box">
+                                                    <tr>
+                                                        <td>
+                                                            <table ng-repeat="childDetail in expensechildinfo.ChildrenList" style="width: 100%; margin-bottom: 10px">
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="matchlabel">Child Support For: </label>
+                                                                        <label class="matchvalueleft">{{childDetail.ChildName}}</label>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="matchlabel">DOB: </label>
+                                                                        <label class="matchvalueleft">{{childDetail.ChildDOB}}</label>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="matchlabel">SSN: </label>
+                                                                        <label class="matchvalueleft">{{childDetail.ChildSSN}}</label>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="padding-top: 10px">
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="matchlabel">Child Support Paid TO: </label>
+                                                                        <label class="matchvalueleft">{{expensechildinfo.NCustoParent}}</label>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <label class="matchlabel">Total Monthly Obligation: </label>
+                                                                        <label class="matchvalueleft">{{expensechildinfo.ObligationAmount}}</label><label class="matchvalueleft" style="padding-left: 5px">{{expensechildinfo.ObligationFreq}}</label>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="matchlabel">Income Information</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <table class="detailtable" frame="box" style="width: 50%;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <table style="width: 98%; text-align: center;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table style="width: 100%">
+                                                                                        <tr style="border-bottom: thin solid">
+                                                                                            <td></td>
+                                                                                            <td style="white-space: nowrap; height: 26px; padding-left: 2px; padding-right: 2px; width: 23%;">
+                                                                                                <label class="matchlabelsmall">Payment Month</label>
+                                                                                            </td>
+                                                                                            <td style="white-space: nowrap; height: 26px; padding-left: 2px; padding-right: 2px; width: 19%;">
+                                                                                                <label class="matchlabelsmall">Amount</label></td>
+                                                                                            <td style="white-space: nowrap; height: 26px; padding-left: 2px; padding-right: 2px; width: 53%;">
+                                                                                                <label class="matchlabelsmall">Source</label></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="padding: 0px; border-color: black; text-align: center">
+                                                                                    <table style="width: 100%">
+                                                                                        <tr ng-repeat="expenseItem in expensechildinfo.ExpenseList" style="border-bottom: thin solid;">
+                                                                                            <td style="border-right: thin solid; border-left: thin solid;">
+                                                                                                <label class="matchvaluesmall">{{$index+1}}</label></td>
+                                                                                            <td style="white-space: nowrap; height: 26px; padding-left: 5px; padding-right: 2px; width: 23%; border-right: thin solid;">
+                                                                                                <label class="matchvaluesmall">{{ expenseItem.PaymentDate}}</label></td>
+                                                                                            <td style="white-space: nowrap; height: 26px; padding-right: 5px; text-align: right; width: 19%; border-right: thin solid;">
+                                                                                                <label class="matchvaluesmall">{{ expenseItem.Amount}}</label></td>
+                                                                                            <td style="white-space: nowrap; height: 26px; padding-left: 2px; padding-right: 2px; width: 53%; text-align: center; border-right: thin solid;">
+                                                                                                <label class="matchvaluesmall">{{ expenseItem.Source}}</label></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="width: 100%">
+                                                        <td style="text-align: right">
+                                                            <table style="border-collapse: collapse; width: 100%">
+                                                                <tr>
+                                                                    <td style="text-align: right">
+                                                                        <label class="datesmall">Request Date/Time: {{ expensechildinfo.RequestDate }}</label>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="text-align: right">
+                                                                        <label class="datesmall">Data current as of: {{ expensechildinfo.ResultDate }}</label>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+===============================
+NYC SEC8 JSON
+========================
+{
+    "AuthenticationValue": "Verified Upon Receipt",
+    "ResultID": 563616,
+    "RequestDate": "02/14/2020 04:01 PM",
+    "ResultDate": "09/01/2016 12:00 AM",
+    "TenantShareSec8Rent": "$0.00",
+    "NYCHAShareSec8Rent": "$0.00",
+    "NYCHARentAmount": "$450.00",
+    "NYCHALastRecertDate": "11/16",
+    "Address": "180 BROOK AVENUE, BRONX, 10454"
+}
+==================
+NYC SEC 8 HTML
+==================
+<div class="row">
+    <form name="NYCHASection8">
+        <div class="col-md-12">
+            <table style="width: 100%">
+                <tr style="height: 25px">
+                    <td style="text-align: left;">
+                        <label class="matchheader">{{ caseName }} <span style="padding-left: 10px">{{ caseNo }}</span></label></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <div ng-show="loading" id="overlay">
+                <div>
+                    <img id="loader" src="assets/images/spinner.gif" />
+                </div>
+            </div>
+            <div class="widget-box">
+                <div class="widget-header">
+                    <table style="width: 100%; text-align: center">
+                        <tr>
+                            <td style="width: 80%; color: #004b8d;">
+                                <h4 class="widget-title">NYCHA - Section 8</h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <div>
+                            <ul class="nav nav-tabs tab-color-blue background-blue" style="white-space: nowrap; overflow-x: auto; overflow-y: hidden; min-height: 35px;">
+                                <li ng-class="getclass(tabinfo.ResultId)" ng-repeat="tabinfo in NYCHASection8TabInfo" style="float: none; display: inline-block; min-width: 50px; font-size: 13px;"><a data-toggle="tab" ng-click="tabClick(tabinfo.ResultId,tabinfo.ClientId,tabinfo.Path,tabinfo.Name,tabinfo.SSN,tabinfo.DOB)" href="">{{tabinfo.Name}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table style="padding: 5px; width: 100%; text-align: left; border-collapse: separate; border-spacing: 5px 3px;" frame="box">
+                                    <tr>
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td style="width: 40%" title="Name">
+                                                        <label class="matchlabel">{{ tabname }}</label>
+                                                    </td>
+                                                    <td style="width: 35%" title="SSN">
+                                                        <label class="matchlabel">SSN: </label>
+                                                        <label class="matchlabel">{{ tabssn }}</label>
+                                                    </td>
+                                                    <td style="width: 25%" title="Date Of Birth">
+                                                        <label class="matchlabel">Date Of Birth: </label>
+                                                        <label class="matchlabel">{{ tabdob }}</label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table style="width: 100%; text-align: left; border-collapse: separate; border-spacing: 10px 7px;" frame="box">
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; text-align: left; border-collapse: separate;">
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchlabel">Residential Address</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="matchvalueleft">{{ NYCHASection8Info.Address }}</label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="matchlabel">NYCHA Last Recert Date (MM/YY) : </label>
+                                                        <label class="matchvalueleft">{{ NYCHASection8Info.NYCHALastRecertDate}}</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="matchlabel">Rent Information</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <table frame="box" style="width: 30%;" class="nychaHPDtable">
+                                                            <tr>
+                                                                <td style="border-color: black;">
+                                                                    <table style="width: 100%; text-align: center;">
+                                                                        <tr style="border-bottom: thin solid;">
+                                                                            <td style="width: 60%; border-right: thin solid; text-align: left; padding-left: 5px;">
+                                                                                <label class="matchlabel">Tenant Share of Sec 8 Rent:</label>
+                                                                            </td>
+                                                                            <td style="width: 40%; text-align: right; padding-right: 5px;">
+                                                                                <label class="matchvalueleft">{{ NYCHASection8Info.TenantShareSec8Rent}}</label>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 60%; border-right: thin solid; text-align: left; padding-left: 5px;">
+                                                                                <label class="matchlabel">NYCHA Share of Sec 8 Rent:</label>
+                                                                            </td>
+                                                                            <td style="width: 40%; text-align: right; padding-right: 5px;">
+                                                                                <label class="matchvalueleft">{{ NYCHASection8Info.NYCHAShareSec8Rent }}</label>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <!--<tr>
+                                                                            <td style="width: 60%; border-right: thin solid; text-align: left; padding-left: 5px;">
+                                                                                <label class="matchlabel">NYCHA Rent Amount:</label>
+                                                                            </td>
+                                                                            <td style="width: 40%; text-align: right; padding-right: 5px;">
+                                                                                <label class="matchvalueleft">{{ NYCHASection8Info.NYCHARentAmount }}</label>
+                                                                            </td>
+                                                                        </tr>-->
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: right">
+                                                        <table style="border-collapse: collapse; width: 100%">
+                                                            <tr>
+                                                                <td style="text-align: right">
+                                                                    <label class="datesmall">Request Date/Time: {{ NYCHASection8Info.RequestDate }}</label>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="text-align: right">
+                                                                    <label class="datesmall">Data current as of: {{ NYCHASection8Info.ResultDate }}</label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
